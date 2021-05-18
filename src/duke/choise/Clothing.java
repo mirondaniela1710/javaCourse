@@ -1,7 +1,37 @@
 package duke.choise;
 
 public class Clothing {
-	String description;
-	double price;
-	String size = "M";
+	private String description;
+	private double price;
+	private String size = "M";
+	private final double MINIMUM_PRICE = 10;
+	private final double TAX = 0.2;
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public double getPrice() {
+		return (TAX + 1) * price;
+	}
+
+	public void setPrice(double price) {
+		if (price < 10) {
+			this.price = MINIMUM_PRICE;
+		} else {
+			this.price = price;
+		}
+	}
+
+	public String getSize() {
+		return size;
+	}
+
+	public void setSize(String size) {
+		this.size = size;
+	}
 }
