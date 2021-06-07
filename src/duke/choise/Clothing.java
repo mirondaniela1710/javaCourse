@@ -43,4 +43,9 @@ public class Clothing {
 	public void setSize(String size) {
 		this.size = size;
 	}
+
+	@Override
+	public String toString() {
+			return "Item is a " +  this.getDescription() + ", size " + this.getSize() + " and price " + this.getPrice();
+	}
 }

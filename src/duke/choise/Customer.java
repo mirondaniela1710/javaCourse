@@ -59,7 +59,8 @@ public class Customer {
 		double total = 0;
 		for (Clothing item: this.items) {
 			if (item.getSize().equalsIgnoreCase(this.getSize())) {
-				System.out.println("Item is a " + item.getDescription() + ", size " + item.getSize() + " and price " + item.getPrice());
+				//System.out.println("Item is a " + item.getDescription() + ", size " + item.getSize() + " and price " + item.getPrice());
+				System.out.println(item);
 				total =  total + item.getPrice();
 			}
 			if (total > 15) {
