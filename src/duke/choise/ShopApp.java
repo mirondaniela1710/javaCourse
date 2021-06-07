@@ -22,5 +22,18 @@ public class ShopApp {
 
 		c1.setItems(items);
 		c1.getTotalClothingCosts();
+
+		double average = 0;
+
+		try {
+			average =  c1.getCustomerAveragePriceOfItemsWithSize("L");
+			System.out.println("The average price is " + average);
+
+		} catch (ArithmeticException e) {
+			System.out.println("Could not calculate average price for customer's items.");
+		}
+
+
+
 	}
 }

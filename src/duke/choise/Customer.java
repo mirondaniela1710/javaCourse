@@ -71,5 +71,27 @@ public class Customer {
 		return total;
 	}
 
+	public double getCustomerAveragePriceOfItemsWithSize(String size) {
+
+		double totalPrice = 0;
+		int counterClothing = 0;
+
+		for(Clothing clothing : this.getItems()) {
+			if (clothing.getSize().equals(size)) {
+				totalPrice = totalPrice + clothing.getPrice();
+				counterClothing ++;
+			}
+		}
+
+		//Having double values, division by zero returns Infinity, which is similar to NaN (not a number).
+		//here the problem is that NaN is not considered an exception
+		if (counterClothing == 0) {
+			throw new ArithmeticException();
+		} else {
+			return totalPrice;
+		}
+
+	}
+
 
 }
