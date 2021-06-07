@@ -5,11 +5,12 @@ public class ShopApp {
 	public static void main(String[] args) {
 
 		double total = 0;
-		//int measurement = 3;
 
 		System.out.println("Welcome to Duke Choice Shop");
 		Customer c1 = new Customer("Pinky", 3);
 		System.out.println("Hello " +  c1.getName());
+
+		System.out.println("The minimum price is " + Clothing.MINIMUM_PRICE);
 
 		Clothing item1 =  new Clothing("Blue Jacket", 20.9, "M");
 		Clothing item2 = new Clothing("Orange t-shirt", 10.5, "S");
